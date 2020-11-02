@@ -59,10 +59,10 @@ module DhlEcommerceClient
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json;charset=UTF-8'])
+      # header_params['Accept'] = @api_client.select_header_accept(['application/json;charset=UTF-8'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'Content-Type'] = content_type
+      # header_params[:'Content-Type'] = content_type
       header_params[:'Authorization'] = opts[:'authorization'] if !opts[:'authorization'].nil?
 
       # form parameters
