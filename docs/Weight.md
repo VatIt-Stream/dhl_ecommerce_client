@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **Integer** |  |
-**unit** | **String** |  |
+**value** | **Float** |  |
+**unit_of_measure** | **String** |  |
 
 

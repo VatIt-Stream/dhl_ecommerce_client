@@ -5,9 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item_id** | **String** |  |
 **hs_code** | **String** |  |
-**hs_code_applied** | **String** |  |
 **sku_number** | **String** |  |
-**product_identifiers** | [**ProductIdentifiers**](ProductIdentifiers.md) |  |
 **product_category** | **String** |  |
 **item_short_description** | **String** |  |
 **item_description** | **String** |  |
@@ -16,20 +14,20 @@ Name | Type | Description | Notes
 **age_group** | **String** |  |
 **color** | **String** |  |
 **style** | **String** |  |
-**composition** | **Array&lt;String&gt;** |  |
 **condition** | **String** |  |
-**country_of_origin** | **String** |  |
 **qualifies_for_preferential_tariffs** | **BOOLEAN** |  |
+**country_of_origin** | **String** |  |
+**composition** | **Array&lt;String&gt;** |  |
 **item_quantity** | [**ItemQuantity**](ItemQuantity.md) |  |
-**item_value** | [**ItemValue1**](ItemValue1.md) |  |
-**item_freight** | [**ItemFreight1**](ItemFreight1.md) |  |
-**item_insurance** | [**ItemInsurance1**](ItemInsurance1.md) |  |
-**width** | [**Width**](Width.md) |  |
+**item_value** | [**ItemValue**](ItemValue.md) |  |
+**product_identifiers** | [**ProductIdentifiers**](ProductIdentifiers.md) |  |
+**item_freight** | [**ItemFreight**](ItemFreight.md) |  |
+**item_insurance** | [**ItemInsurance**](ItemInsurance.md) |  |
 **length** | [**Length**](Length.md) |  |
+**width** | [**Width**](Width.md) |  |
 **height** | [**Height**](Height.md) |  |
-**weight** | [**Weight**](Weight.md) |  |
-**volume** | [**Volume**](Volume.md) |  |
+**weight** | [**Weight17**](Weight17.md) |  |
 **area** | [**Area**](Area.md) |  |
-**item_fees** | [**Array&lt;ItemFee&gt;**](ItemFee.md) |  |
+**volume** | [**Volume**](Volume.md) |  |
 
 

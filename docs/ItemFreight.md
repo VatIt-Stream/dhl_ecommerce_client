@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **Float** |  |
+**value** | **Integer** |  |
 **currency** | **String** |  |
 
 
