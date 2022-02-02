@@ -129,7 +129,7 @@ module DhlEcommerceClient
 
     def initialize
       @scheme = 'https'
-      @host = 'api-sandbox.dhlecs.com'
+      @host = 'api.dhl.com'
       @base_path = '/'
       @api_key = {}
       @api_key_prefix = {}

@@ -51,7 +51,7 @@ module DhlEcommerceClient
         fail ArgumentError, "Missing the required parameter 'body' when calling DutyTaxCalculatorApi.request_quote"
       end
       # resource path
-      local_var_path = '/dtc/v4/quotes'
+      local_var_path = '/dtc/v1/quotes'
 
       # query parameters
       query_params = {}
