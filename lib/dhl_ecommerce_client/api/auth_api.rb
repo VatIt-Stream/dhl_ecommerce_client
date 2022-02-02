@@ -27,8 +27,8 @@ module DhlEcommerceClient
     # @param client_secret
     # @param [Hash] opts the optional parameters
     # @return [RequestAccessTokenSuccessful]
-    def request_access_token(content_type, grant_type, client_id, client_secret, opts = {})
-      data, _status_code, _headers = request_access_token_with_http_info(content_type, grant_type, client_id, client_secret, opts)
+    def request_access_token(content_type, grant_type, response_type, client_id, client_secret, opts = {})
+      data, _status_code, _headers = request_access_token_with_http_info(content_type, grant_type, response_type, client_id, client_secret, opts)
       data
     end
 
@@ -40,7 +40,7 @@ module DhlEcommerceClient
     # @param client_secret
     # @param [Hash] opts the optional parameters
     # @return [Array<(RequestAccessTokenSuccessful, Fixnum, Hash)>] RequestAccessTokenSuccessful data, response status code and response headers
-    def request_access_token_with_http_info(content_type, grant_type, client_id, client_secret, opts = {})
+    def request_access_token_with_http_info(content_type, grant_type, response_type, client_id, client_secret, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: AuthApi.request_access_token ...'
       end
@@ -61,24 +61,26 @@ module DhlEcommerceClient
         fail ArgumentError, "Missing the required parameter 'client_secret' when calling AuthApi.request_access_token"
       end
       # resource path
-      local_var_path = '/auth/v4/accesstoken'
+      local_var_path = '/auth/v1/token'
 
       # query parameters
       query_params = {}
-
+      query_params['grant_type'] = grant_type
+      query_params['response_type'] = response_type
+      
       # header parameters
       header_params = {}
       # HTTP header 'Accept' (if needed)
       # header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/x-www-form-urlencoded'])
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params['Authorization'] = "Basic #{base_64_encoded_api_credentials(client_id,client_secret)}"
       # header_params[:'Content-Type'] = content_type
-
+      
       # form parameters
       form_params = {}
-      form_params['grant_type'] = grant_type
-      form_params['client_id'] = client_id
-      form_params['client_secret'] = client_secret
+      # form_params['client_id'] = client_id
+      # form_params['client_secret'] = client_secret
 
       # http body (model)
       post_body = nil
@@ -94,6 +96,10 @@ module DhlEcommerceClient
         @api_client.config.logger.debug "API called: AuthApi#request_access_token\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
+    end
+
+    def base_64_encoded_api_credentials(client_id, client_secret)
+      Base64.strict_encode64([client_id, client_secret].join(":"))
     end
   end
 end
