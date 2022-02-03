@@ -75,7 +75,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-sandbox.dhlecs.com*
+All URIs are relative to *https://api.dhl.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

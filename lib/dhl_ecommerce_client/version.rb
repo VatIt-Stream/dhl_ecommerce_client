@@ -11,5 +11,5 @@ Swagger Codegen version: 2.4.17
 =end
 
 module DhlEcommerceClient
-  VERSION = '1.0.3'
+  VERSION = '1.0.4'
 end

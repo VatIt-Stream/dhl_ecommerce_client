@@ -1,6 +1,6 @@
 # DhlEcommerceClient::CreateManifestSApi
 
-All URIs are relative to *https://api-sandbox.dhlecs.com*
+All URIs are relative to *https://api.dhl.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
